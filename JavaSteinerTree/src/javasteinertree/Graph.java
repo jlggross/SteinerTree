@@ -69,7 +69,20 @@ public class Graph {
         this.lstEdge.remove(edge);
     }
     
-    public boolean hasCicle(int node) {
+    public boolean hasLoop(int node) {
+        for (int index = 0; index < this.visitado.length; ++index) {
+            this.visitado[index] = false;
+        }
+        for (ArrayList<Node> lstNode : this.graph) {
+            for (Node nodeToClean : lstNode) {
+                nodeToClean.setAccessed(false);
+            }
+        }
+        
+        return hasLoopRecursive(node);
+    }
+    
+    public boolean hasLoopRecursive(int node) {
         this.visitado[node] = true;
         if (this.graph.get(node) != null) {
             for (int indexFirst = 0; indexFirst < this.graph.get(node).size(); ++indexFirst) {
@@ -85,7 +98,7 @@ public class Graph {
                     }
                     if (this.visitado[firstNode.getVertex()]) {
                         return true;
-                    } else if (hasCicle(firstNode.getVertex())) {
+                    } else if (hasLoopRecursive(firstNode.getVertex())) {
                         return true;
                     }
                 }
