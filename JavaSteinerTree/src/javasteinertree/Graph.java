@@ -14,16 +14,24 @@ import java.util.List;
  * @author elc
  */
 public class Graph {
-    private final ArrayList<ArrayList<Node>> graph = new ArrayList<>();
-    private int edges;
-    private final int nodes;
-    private boolean[] visitado;
-    private List<Edge> lstEdge = new ArrayList<>();
+    protected final ArrayList<ArrayList<Node>> graph = new ArrayList<>();
+    protected int edges;
+    protected final int numberOfNodes;
+    protected final boolean[] visitado;
+    protected final List<Edge> lstEdge = new ArrayList<>();
     
     public Graph(int numberOfNodes) {
         this.visitado = new boolean[numberOfNodes];
-        this.nodes = numberOfNodes;
+        this.numberOfNodes = numberOfNodes;
         this.edges = 0;
+    }
+    
+    public ArrayList<ArrayList<Node>> getGraph() {
+        return this.graph;
+    }
+    
+    public int getNumberOfNodes() {
+        return numberOfNodes;
     }
     
     public void addEdge(Edge edge) {
