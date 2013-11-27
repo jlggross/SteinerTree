@@ -9,19 +9,19 @@ import java.util.List;
  */
 public class TabuList {
    
-    protected final int BT_MAX = 40;
-    protected final int TABU_SIZE = 10;
-    protected final int TABU_TIME = 15;
-    protected final int MAX_EVALUATION = 999999999;
+    final int BT_MAX = 40;
+    final int TABU_SIZE = 10;
+    final int TABU_TIME = 15;
+    final int MAX_EVALUATION = 999999999;
 
-    protected Solution otima;
+    protected Solution optimal;
     protected List<Solution> tabus = new ArrayList<>();
     
     /* 
      * Class constructor
      */
     public TabuList() {
-        this.otima.setEvaluation(MAX_EVALUATION);
+        this.optimal.setEvaluation(MAX_EVALUATION);
     }
     
     /* 
@@ -53,9 +53,9 @@ public class TabuList {
     /* 
      * Updates solution "ótima"
      */
-    public boolean updateOtima(Solution s) {
-        if (s.getEvaluation() < this.otima.getEvaluation()) {
-            this.otima = s;
+    public boolean updateOptimal(Solution s) {
+        if (s.getEvaluation() < this.optimal.getEvaluation()) {
+            this.optimal = s;
             return true;
         }
         
@@ -80,6 +80,10 @@ public class TabuList {
                 this.tabus.remove(count);
             }
         }
+    }
+    
+    public Solution getOptimal() {
+        return this.optimal;
     }
     
 }

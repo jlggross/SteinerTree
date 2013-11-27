@@ -1,0 +1,5 @@
+Inicial - Avaliacao = 13611
+
+0   ---   meio: 13611
+1   ---   meio: 13607
+2   ---   meio: 13597

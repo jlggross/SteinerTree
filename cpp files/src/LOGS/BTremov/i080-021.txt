@@ -1,0 +1,157 @@
+Inicial - Avaliacao = 1478
+
+0   ---   meio: 1478 otima: 1478
+Lista Tabu = 
+
+vizinhos = 0
+nao achou!
+1   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 
+
+vizinhos = 0
+nao achou!
+2   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 
+
+vizinhos = 0
+nao achou!
+3   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+4   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+5   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+6   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+7   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+8   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+9   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+10   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+11   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+12   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+13   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+14   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+15   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+16   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+17   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+18   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+19   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+20   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+21   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+22   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+23   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+24   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+25   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+26   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+27   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+28   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+29   ---   meio: 1478 otima: 1478
+Lista Tabu = 1478 1478 1478 1478 1478 1478 1478 1478 1478 
+
+vizinhos = 0
+nao achou!
+Tempo gasto = 2segs
+Tabu - Avaliacao = 1478
+
+Otima Tabu - Avaliacao = 1478
+

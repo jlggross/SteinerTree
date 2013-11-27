@@ -66,5 +66,51 @@ public class Search {
      * Goes for the first best solution.
      * Uses a list of forbeidens (tabu).
      */  
-    //public tabuSearch(Solution initial, Graph g, int iterations, )
+    public Solution tabuSearch(Solution initial, Graph g, int iterations, TabuList tabuList) {
+        while (iterations < TabuList.BT_MAX) {
+            tabuList.printTabuList();
+            
+            List<Solution> neighbors = new ArrayList<>();
+            initial.createNeighborhood(neighbors, g);
+            
+            System.out.println("neighbors = ");
+            
+            tabuList.insertTabu(initial);
+            int less = initial.getEvaluation();
+            int size = neighbors.size();
+            int indLess = -1;
+            boolean found = false;
+            
+            int count = -1;
+            for (Solution s : neighbors) {
+                count++;
+                int valued = s.getEvaluation();
+                if (valued < less && !tabuList.hasItem(s)) {
+                    less = valued;
+                    indLess = count;
+                }
+            }
+            
+            if (indLess != -1) {
+                if (tabuList.updateOptimal(neighbors.get(indLess))) {
+                    initial = neighbors.get(indLess);
+                    iterations = 0;
+                    System.out.println("Found a better solution!");
+                } else {
+                    initial = neighbors.get(indLess);
+                    iterations++;
+                }
+            } 
+            
+            /* if there is not a neighbor with a better solution than the
+             * initial solution, we insert the initial solution in the tabu
+             * list and continue the search with the first possible solution.
+             */
+            else {
+                
+            }
+        }
+        
+        return tabuList.getOptimal();
+    }
 }
