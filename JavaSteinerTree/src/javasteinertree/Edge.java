@@ -11,8 +11,10 @@ package javasteinertree;
  * @author elc
  */
 public class Edge {
-    private final int start;
-    private final int end;
+
+    /* Edge connects start node and end node */
+    private final int start;	//start node
+    private final int end;		//end node
     private final int weight;
     
     public Edge(int start, int end, int weight) {

@@ -49,6 +49,7 @@ public class Graph {
             graph.add(edge.getStart(), new ArrayList<Node>());
             graph.get(edge.getStart()).add(node2);
         }
+		this.edges++;
         this.lstEdge.add(edge);
     }
     
