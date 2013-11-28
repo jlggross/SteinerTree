@@ -1,0 +1,332 @@
+Inicial - Avaliacao = 511
+
+0   ---   meio: 511 otima: 511
+Lista Tabu = 
+
+vizinhos = 25
+achou um melhor!
+0   ---   meio: 501 otima: 501
+Lista Tabu = 511 
+
+vizinhos = 24
+achou um melhor!
+0   ---   meio: 491 otima: 491
+Lista Tabu = 511 501 
+
+vizinhos = 24
+achou um melhor!
+0   ---   meio: 483 otima: 483
+Lista Tabu = 511 501 491 
+
+vizinhos = 23
+achou um melhor!
+0   ---   meio: 475 otima: 475
+Lista Tabu = 511 501 491 483 
+
+vizinhos = 22
+achou um melhor!
+0   ---   meio: 467 otima: 467
+Lista Tabu = 511 501 491 483 475 
+
+vizinhos = 21
+achou um melhor!
+0   ---   meio: 459 otima: 459
+Lista Tabu = 511 501 491 483 475 467 
+
+vizinhos = 20
+achou um melhor!
+0   ---   meio: 453 otima: 453
+Lista Tabu = 511 501 491 483 475 467 459 
+
+vizinhos = 19
+achou um melhor!
+0   ---   meio: 447 otima: 447
+Lista Tabu = 511 501 491 483 475 467 459 453 
+
+vizinhos = 18
+achou um melhor!
+0   ---   meio: 441 otima: 441
+Lista Tabu = 511 501 491 483 475 467 459 453 447 
+
+vizinhos = 17
+achou um melhor!
+0   ---   meio: 435 otima: 435
+Lista Tabu = 501 491 483 475 467 459 453 447 441 
+
+vizinhos = 16
+achou um melhor!
+0   ---   meio: 429 otima: 429
+Lista Tabu = 491 483 475 467 459 453 447 441 435 
+
+vizinhos = 15
+achou um melhor!
+0   ---   meio: 424 otima: 424
+Lista Tabu = 483 475 467 459 453 447 441 435 429 
+
+vizinhos = 15
+achou um melhor!
+0   ---   meio: 420 otima: 420
+Lista Tabu = 475 467 459 453 447 441 435 429 424 
+
+vizinhos = 15
+achou um melhor!
+0   ---   meio: 411 otima: 411
+Lista Tabu = 467 459 453 447 441 435 429 424 420 
+
+vizinhos = 14
+achou um melhor!
+0   ---   meio: 407 otima: 407
+Lista Tabu = 459 453 447 441 435 429 424 420 411 
+
+vizinhos = 13
+achou um melhor!
+0   ---   meio: 403 otima: 403
+Lista Tabu = 453 447 441 435 429 424 420 411 407 
+
+vizinhos = 12
+achou um melhor!
+0   ---   meio: 400 otima: 400
+Lista Tabu = 447 441 435 429 424 420 411 407 403 
+
+vizinhos = 11
+achou um melhor!
+0   ---   meio: 397 otima: 397
+Lista Tabu = 441 435 429 424 420 411 407 403 400 
+
+vizinhos = 10
+achou um melhor!
+0   ---   meio: 394 otima: 394
+Lista Tabu = 435 429 424 420 411 407 403 400 397 
+
+vizinhos = 10
+achou um melhor!
+0   ---   meio: 389 otima: 389
+Lista Tabu = 429 424 420 411 407 403 400 397 394 
+
+vizinhos = 9
+achou um melhor!
+0   ---   meio: 387 otima: 387
+Lista Tabu = 424 420 411 407 403 400 397 394 389 
+
+vizinhos = 9
+achou um melhor!
+0   ---   meio: 379 otima: 379
+Lista Tabu = 420 411 407 403 400 397 394 389 387 
+
+vizinhos = 9
+achou um melhor!
+0   ---   meio: 376 otima: 376
+Lista Tabu = 411 407 403 400 397 394 389 387 379 
+
+vizinhos = 8
+achou um melhor!
+0   ---   meio: 374 otima: 374
+Lista Tabu = 407 403 400 397 394 389 387 379 376 
+
+vizinhos = 7
+achou um melhor!
+0   ---   meio: 372 otima: 372
+Lista Tabu = 403 400 397 394 389 387 379 376 374 
+
+vizinhos = 6
+achou um melhor!
+0   ---   meio: 370 otima: 370
+Lista Tabu = 400 397 394 389 387 379 376 374 372 
+
+vizinhos = 5
+achou um melhor!
+0   ---   meio: 368 otima: 368
+Lista Tabu = 397 394 389 387 379 376 374 372 370 
+
+vizinhos = 5
+achou um melhor!
+0   ---   meio: 361 otima: 361
+Lista Tabu = 394 389 387 379 376 374 372 370 368 
+
+vizinhos = 5
+achou um melhor!
+0   ---   meio: 358 otima: 358
+Lista Tabu = 389 387 379 376 374 372 370 368 361 
+
+vizinhos = 5
+achou um melhor!
+0   ---   meio: 353 otima: 353
+Lista Tabu = 387 379 376 374 372 370 368 361 358 
+
+vizinhos = 4
+achou um melhor!
+0   ---   meio: 352 otima: 352
+Lista Tabu = 379 376 374 372 370 368 361 358 353 
+
+vizinhos = 3
+achou um melhor!
+0   ---   meio: 351 otima: 351
+Lista Tabu = 376 374 372 370 368 361 358 353 352 
+
+vizinhos = 3
+achou um melhor!
+0   ---   meio: 345 otima: 345
+Lista Tabu = 374 372 370 368 361 358 353 352 351 
+
+vizinhos = 2
+achou um melhor!
+0   ---   meio: 344 otima: 344
+Lista Tabu = 372 370 368 361 358 353 352 351 345 
+
+vizinhos = 1
+achou um melhor!
+0   ---   meio: 343 otima: 343
+Lista Tabu = 370 368 361 358 353 352 351 345 344 
+
+vizinhos = 0
+nao achou!
+1   ---   meio: 343 otima: 343
+Lista Tabu = 368 361 358 353 352 351 345 344 343 
+
+vizinhos = 0
+nao achou!
+2   ---   meio: 343 otima: 343
+Lista Tabu = 361 358 353 352 351 345 344 343 343 
+
+vizinhos = 0
+nao achou!
+3   ---   meio: 343 otima: 343
+Lista Tabu = 358 353 352 351 345 344 343 343 343 
+
+vizinhos = 0
+nao achou!
+4   ---   meio: 343 otima: 343
+Lista Tabu = 353 352 351 345 344 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+5   ---   meio: 343 otima: 343
+Lista Tabu = 352 351 345 344 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+6   ---   meio: 343 otima: 343
+Lista Tabu = 351 345 344 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+7   ---   meio: 343 otima: 343
+Lista Tabu = 345 344 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+8   ---   meio: 343 otima: 343
+Lista Tabu = 344 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+9   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+10   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+11   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+12   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+13   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+14   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+15   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+16   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+17   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+18   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+19   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+20   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+21   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+22   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+23   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+24   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+25   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+26   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+27   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+28   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+29   ---   meio: 343 otima: 343
+Lista Tabu = 343 343 343 343 343 343 343 343 343 
+
+vizinhos = 0
+nao achou!
+Tempo gasto = 1segs
+Tabu - Avaliacao = 343
+
+Otima Tabu - Avaliacao = 343
+

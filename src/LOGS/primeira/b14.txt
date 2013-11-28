@@ -1,0 +1,41 @@
+Inicial - Avaliacao = 511
+
+0   ---   meio: 511
+1   ---   meio: 505
+2   ---   meio: 504
+3   ---   meio: 501
+4   ---   meio: 491
+5   ---   meio: 489
+6   ---   meio: 484
+7   ---   meio: 482
+8   ---   meio: 478
+9   ---   meio: 469
+10   ---   meio: 466
+11   ---   meio: 465
+12   ---   meio: 459
+13   ---   meio: 451
+14   ---   meio: 448
+15   ---   meio: 438
+16   ---   meio: 436
+17   ---   meio: 434
+18   ---   meio: 428
+19   ---   meio: 427
+20   ---   meio: 423
+21   ---   meio: 417
+22   ---   meio: 412
+23   ---   meio: 406
+24   ---   meio: 404
+25   ---   meio: 396
+26   ---   meio: 395
+27   ---   meio: 389
+28   ---   meio: 381
+29   ---   meio: 373
+30   ---   meio: 369
+31   ---   meio: 366
+32   ---   meio: 358
+33   ---   meio: 351
+34   ---   meio: 348
+35   ---   meio: 343
+Tempo gasto = 1segs
+Primeira - Avaliacao = 343
+

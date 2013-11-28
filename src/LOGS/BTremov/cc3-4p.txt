@@ -1,0 +1,367 @@
+Inicial - Avaliacao = 7801
+
+0   ---   meio: 7801 otima: 7801
+Lista Tabu = 
+
+vizinhos = 36
+achou um melhor!
+0   ---   meio: 7591 otima: 7591
+Lista Tabu = 7801 
+
+vizinhos = 35
+achou um melhor!
+0   ---   meio: 7382 otima: 7382
+Lista Tabu = 7801 7591 
+
+vizinhos = 34
+achou um melhor!
+0   ---   meio: 7174 otima: 7174
+Lista Tabu = 7801 7591 7382 
+
+vizinhos = 33
+achou um melhor!
+0   ---   meio: 6968 otima: 6968
+Lista Tabu = 7801 7591 7382 7174 
+
+vizinhos = 32
+achou um melhor!
+0   ---   meio: 6764 otima: 6764
+Lista Tabu = 7801 7591 7382 7174 6968 
+
+vizinhos = 31
+achou um melhor!
+0   ---   meio: 6654 otima: 6654
+Lista Tabu = 7801 7591 7382 7174 6968 6764 
+
+vizinhos = 30
+achou um melhor!
+0   ---   meio: 6544 otima: 6544
+Lista Tabu = 7801 7591 7382 7174 6968 6764 6654 
+
+vizinhos = 29
+achou um melhor!
+0   ---   meio: 6434 otima: 6434
+Lista Tabu = 7801 7591 7382 7174 6968 6764 6654 6544 
+
+vizinhos = 28
+achou um melhor!
+0   ---   meio: 6324 otima: 6324
+Lista Tabu = 7801 7591 7382 7174 6968 6764 6654 6544 6434 
+
+vizinhos = 27
+achou um melhor!
+0   ---   meio: 6215 otima: 6215
+Lista Tabu = 7591 7382 7174 6968 6764 6654 6544 6434 6324 
+
+vizinhos = 26
+achou um melhor!
+0   ---   meio: 6106 otima: 6106
+Lista Tabu = 7382 7174 6968 6764 6654 6544 6434 6324 6215 
+
+vizinhos = 25
+achou um melhor!
+0   ---   meio: 5998 otima: 5998
+Lista Tabu = 7174 6968 6764 6654 6544 6434 6324 6215 6106 
+
+vizinhos = 24
+achou um melhor!
+0   ---   meio: 5890 otima: 5890
+Lista Tabu = 6968 6764 6654 6544 6434 6324 6215 6106 5998 
+
+vizinhos = 23
+achou um melhor!
+0   ---   meio: 5782 otima: 5782
+Lista Tabu = 6764 6654 6544 6434 6324 6215 6106 5998 5890 
+
+vizinhos = 22
+achou um melhor!
+0   ---   meio: 5674 otima: 5674
+Lista Tabu = 6654 6544 6434 6324 6215 6106 5998 5890 5782 
+
+vizinhos = 21
+achou um melhor!
+0   ---   meio: 5567 otima: 5567
+Lista Tabu = 6544 6434 6324 6215 6106 5998 5890 5782 5674 
+
+vizinhos = 20
+achou um melhor!
+0   ---   meio: 5460 otima: 5460
+Lista Tabu = 6434 6324 6215 6106 5998 5890 5782 5674 5567 
+
+vizinhos = 19
+achou um melhor!
+0   ---   meio: 5353 otima: 5353
+Lista Tabu = 6324 6215 6106 5998 5890 5782 5674 5567 5460 
+
+vizinhos = 19
+achou um melhor!
+0   ---   meio: 5145 otima: 5145
+Lista Tabu = 6215 6106 5998 5890 5782 5674 5567 5460 5353 
+
+vizinhos = 18
+achou um melhor!
+0   ---   meio: 5038 otima: 5038
+Lista Tabu = 6106 5998 5890 5782 5674 5567 5460 5353 5145 
+
+vizinhos = 17
+achou um melhor!
+0   ---   meio: 4931 otima: 4931
+Lista Tabu = 5998 5890 5782 5674 5567 5460 5353 5145 5038 
+
+vizinhos = 16
+achou um melhor!
+0   ---   meio: 4825 otima: 4825
+Lista Tabu = 5890 5782 5674 5567 5460 5353 5145 5038 4931 
+
+vizinhos = 15
+achou um melhor!
+0   ---   meio: 4720 otima: 4720
+Lista Tabu = 5782 5674 5567 5460 5353 5145 5038 4931 4825 
+
+vizinhos = 14
+achou um melhor!
+0   ---   meio: 4616 otima: 4616
+Lista Tabu = 5674 5567 5460 5353 5145 5038 4931 4825 4720 
+
+vizinhos = 14
+achou um melhor!
+0   ---   meio: 4509 otima: 4509
+Lista Tabu = 5567 5460 5353 5145 5038 4931 4825 4720 4616 
+
+vizinhos = 13
+achou um melhor!
+0   ---   meio: 4405 otima: 4405
+Lista Tabu = 5460 5353 5145 5038 4931 4825 4720 4616 4509 
+
+vizinhos = 12
+achou um melhor!
+0   ---   meio: 4302 otima: 4302
+Lista Tabu = 5353 5145 5038 4931 4825 4720 4616 4509 4405 
+
+vizinhos = 11
+achou um melhor!
+0   ---   meio: 4199 otima: 4199
+Lista Tabu = 5145 5038 4931 4825 4720 4616 4509 4405 4302 
+
+vizinhos = 10
+achou um melhor!
+0   ---   meio: 4096 otima: 4096
+Lista Tabu = 5038 4931 4825 4720 4616 4509 4405 4302 4199 
+
+vizinhos = 9
+achou um melhor!
+0   ---   meio: 3993 otima: 3993
+Lista Tabu = 4931 4825 4720 4616 4509 4405 4302 4199 4096 
+
+vizinhos = 9
+achou um melhor!
+0   ---   meio: 3886 otima: 3886
+Lista Tabu = 4825 4720 4616 4509 4405 4302 4199 4096 3993 
+
+vizinhos = 8
+achou um melhor!
+0   ---   meio: 3783 otima: 3783
+Lista Tabu = 4720 4616 4509 4405 4302 4199 4096 3993 3886 
+
+vizinhos = 8
+achou um melhor!
+0   ---   meio: 3680 otima: 3680
+Lista Tabu = 4616 4509 4405 4302 4199 4096 3993 3886 3783 
+
+vizinhos = 7
+achou um melhor!
+0   ---   meio: 3578 otima: 3578
+Lista Tabu = 4509 4405 4302 4199 4096 3993 3886 3783 3680 
+
+vizinhos = 7
+achou um melhor!
+0   ---   meio: 3376 otima: 3376
+Lista Tabu = 4405 4302 4199 4096 3993 3886 3783 3680 3578 
+
+vizinhos = 6
+achou um melhor!
+0   ---   meio: 3274 otima: 3274
+Lista Tabu = 4302 4199 4096 3993 3886 3783 3680 3578 3376 
+
+vizinhos = 5
+achou um melhor!
+0   ---   meio: 3172 otima: 3172
+Lista Tabu = 4199 4096 3993 3886 3783 3680 3578 3376 3274 
+
+vizinhos = 4
+achou um melhor!
+0   ---   meio: 3070 otima: 3070
+Lista Tabu = 4096 3993 3886 3783 3680 3578 3376 3274 3172 
+
+vizinhos = 3
+achou um melhor!
+0   ---   meio: 2968 otima: 2968
+Lista Tabu = 3993 3886 3783 3680 3578 3376 3274 3172 3070 
+
+vizinhos = 2
+achou um melhor!
+0   ---   meio: 2867 otima: 2867
+Lista Tabu = 3886 3783 3680 3578 3376 3274 3172 3070 2968 
+
+vizinhos = 2
+achou um melhor!
+0   ---   meio: 2762 otima: 2762
+Lista Tabu = 3783 3680 3578 3376 3274 3172 3070 2968 2867 
+
+vizinhos = 1
+achou um melhor!
+0   ---   meio: 2661 otima: 2661
+Lista Tabu = 3680 3578 3376 3274 3172 3070 2968 2867 2762 
+
+vizinhos = 0
+nao achou!
+1   ---   meio: 2661 otima: 2661
+Lista Tabu = 3578 3376 3274 3172 3070 2968 2867 2762 2661 
+
+vizinhos = 0
+nao achou!
+2   ---   meio: 2661 otima: 2661
+Lista Tabu = 3376 3274 3172 3070 2968 2867 2762 2661 2661 
+
+vizinhos = 0
+nao achou!
+3   ---   meio: 2661 otima: 2661
+Lista Tabu = 3274 3172 3070 2968 2867 2762 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+4   ---   meio: 2661 otima: 2661
+Lista Tabu = 3172 3070 2968 2867 2762 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+5   ---   meio: 2661 otima: 2661
+Lista Tabu = 3070 2968 2867 2762 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+6   ---   meio: 2661 otima: 2661
+Lista Tabu = 2968 2867 2762 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+7   ---   meio: 2661 otima: 2661
+Lista Tabu = 2867 2762 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+8   ---   meio: 2661 otima: 2661
+Lista Tabu = 2762 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+9   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+10   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+11   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+12   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+13   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+14   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+15   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+16   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+17   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+18   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+19   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+20   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+21   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+22   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+23   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+24   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+25   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+26   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+27   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+28   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+29   ---   meio: 2661 otima: 2661
+Lista Tabu = 2661 2661 2661 2661 2661 2661 2661 2661 2661 
+
+vizinhos = 0
+nao achou!
+Tempo gasto = 0segs
+Tabu - Avaliacao = 2661
+
+Otima Tabu - Avaliacao = 2661
+

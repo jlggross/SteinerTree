@@ -1,0 +1,53 @@
+Pseudo-código
+
+Este pseudo código é um resumo da execução da heurística de busca tabu
+para o problema de árvores de steiner. A execução do pseudo-código 
+começa na função SteinerTree_TabuSearch().
+
+
+SteinerTree_TabuSearch()
+	captura tempo inicial t1
+
+	lê arquivo de entrada contendo a instância
+	cria grafo g e o inicializa com a tabela de adjacência 	
+	cria solução trivial s, contendo uma solução inicial	
+	seta a solução ótima da busca tabu como sendo a solução inicial s
+	
+	inicializa lstTabu, lista de tabus, com zero elementos
+	BuscaTabu(s, g, 0, lstTabu)					
+	
+	captura tempo final t2
+	calcula tempo de execução t2 - t1
+end-function
+
+
+BuscaTabu(s, g, it, lstTabu)	
+	se iterações < tabuSearchMAX faz
+		cria vetor neighbors de soluções vizinhas à solução inicial
+		para cada solução i de neighbors faz
+			se i < s and i != soluções da lista tabu, então
+				atualiza solução i na lstTabu
+				se i < lstTabu.otima
+					adiciona i à lstTabu
+					return BuscaTabu(i, g, 0, lstTabu)
+				end-se, senão
+					adiciona i à lstTabu
+					return BuscaTabu(i, g, iter+1, lstTabu)
+				end-senão
+			end-se
+		end-para cada
+		cria solução valMenor = EVALUATION_MAX	
+		para cada solução i de neighbors faz
+			se i < valMenor and i != soluções da lista tabu, então
+				valMenor = valor de i
+				return BuscaTabu(i, g, iter+1, lstTabu)	
+			end-se 
+		end-para cada
+		return lstTabu.otima
+	end-se, senão
+		return s
+	end-senão
+end-function
+
+
+

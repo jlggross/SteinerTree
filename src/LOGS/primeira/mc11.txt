@@ -1,0 +1,23 @@
+Inicial - Avaliacao = 33696
+
+0   ---   meio: 33696
+1   ---   meio: 33688
+2   ---   meio: 33671
+3   ---   meio: 33670
+4   ---   meio: 33663
+5   ---   meio: 33624
+6   ---   meio: 33580
+7   ---   meio: 33542
+8   ---   meio: 33519
+9   ---   meio: 33477
+10   ---   meio: 33432
+11   ---   meio: 33390
+12   ---   meio: 33357
+13   ---   meio: 33330
+14   ---   meio: 33316
+15   ---   meio: 33297
+16   ---   meio: 33249
+17   ---   meio: 33200
+Tempo gasto = 9segs
+Primeira - Avaliacao = 33200
+

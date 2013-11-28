@@ -1,0 +1,16 @@
+Inicial - Avaliacao = 13611
+
+0   ---   meio: 13611
+1   ---   meio: 13601
+2   ---   meio: 13591
+3   ---   meio: 13581
+4   ---   meio: 13571
+5   ---   meio: 13561
+6   ---   meio: 13551
+7   ---   meio: 13541
+8   ---   meio: 13531
+9   ---   meio: 13521
+10   ---   meio: 13511
+Tempo gasto = 1348segs
+Melhor - Avaliacao = 13511
+
