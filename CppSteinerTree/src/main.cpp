@@ -1,5 +1,5 @@
 #include "../includes/steiner.h"
-#include "../includes/buscas.h"
+#include "../includes/search.h"
 #include "time.h"
 
 int main() {

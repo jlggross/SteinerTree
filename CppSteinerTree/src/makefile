@@ -1,36 +1,33 @@
-# makefile pro Steinertree
-
-OBJS = entrada.o grafo.o main.o solucao.o set.o busca.o listabu.o
+OBJS = entry.o graph.o main.o solution.o set.o search.o tabulist.o
 CC = g++
 INC_PATH = ../includes/
-OPTS = -g #-pg #necessario para fazer o profiling
-EXTRA_CFLAGS = -DLOG_AVAL
+OPTS = -g
 
 all: steinertree
 
-steinertree:	$(OBJS)
-		$(CC) -o steinertree $(EXTRA_CFLAGS) $(OBJS) $(OPTS)
+steinertree: $(OBJS)
+	$(CC) -o steinertree $(OBJS) $(OPTS)
 
-entrada.o:	entrada.cpp $(INC_PATH)steiner.h
-		$(CC) -c entrada.cpp -o entrada.o $(OPTS)
+entry.o: entry.cpp $(INC_PATH)steiner.h
+	$(CC) -c entry.cpp -o entry.o $(OPTS)
 
-grafo.o:	grafo.cpp $(INC_PATH)grafo.h
-		$(CC) -c grafo.cpp -o grafo.o $(OPTS)
+graph.o: graph.cpp $(INC_PATH)graph.h
+	$(CC) -c graph.cpp -o graph.o $(OPTS)
 			
-main.o:		main.cpp $(INC_PATH)steiner.h $(INC_PATH)buscas.h
-		$(CC) -c main.cpp -o main.o $(OPTS)
+main.o:	main.cpp $(INC_PATH)steiner.h $(INC_PATH)search.h
+	$(CC) -c main.cpp -o main.o $(OPTS)
 			
-solucao.o:	solucao.cpp $(INC_PATH)solucao.h
-		$(CC) -c solucao.cpp -o solucao.o $(OPTS)
+solution.o: solution.cpp $(INC_PATH)solution.h
+	$(CC) -c solution.cpp -o solution.o $(OPTS)
 
-set.o:		set.cpp $(INC_PATH)set.h
-		$(CC) -c set.cpp -o set.o $(OPTS)
+set.o: set.cpp $(INC_PATH)set.h
+	$(CC) -c set.cpp -o set.o $(OPTS)
 
-busca.o:	busca.cpp $(INC_PATH)buscas.h
-		$(CC) -c busca.cpp -o busca.o $(OPTS)
+search.o: search.cpp $(INC_PATH)search.h
+	$(CC) -c search.cpp -o search.o $(OPTS)
 
-listabu.o:	listabu.cpp $(INC_PATH)listabu.h
-		$(CC) -c listabu.cpp -o listabu.o $(OPTS)
+tabulist.o: tabulist.cpp $(INC_PATH)tabulist.h
+	$(CC) -c tabulist.cpp -o tabulist.o $(OPTS)
 			
 clean:	
 	rm -f steinertree

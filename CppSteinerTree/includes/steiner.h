@@ -4,7 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "solucao.h"
+#include "solution.h"
 
 Graph readInput(Solution &solution);
 
