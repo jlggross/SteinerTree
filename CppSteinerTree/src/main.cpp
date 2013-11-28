@@ -18,9 +18,8 @@ int main() {
 	tabu = searchTabuRecursive(solution,graph,0,lstTabu);
 	time2 = time(NULL);
 	diff = difftime(time2,time1);
-	cout << "Tempo gasto = " << diff << "segs" << endl << "Tabu - ";
-	tabu.printScore();
-	cout << "Otima Tabu - ";
+	cout << "Tempo gasto = " << diff << "segs" << endl;
+	cout << "Solução Ótima Tabu - ";
 	lstTabu.printOptimum();
 	return 0;
 }

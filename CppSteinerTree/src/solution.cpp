@@ -83,6 +83,8 @@ void Solution::addEdge(edge_t edge) {
 		++edgeCount;
 		edgeSet.add(edge);
 		evaluation += edge.weight;
+		//cout << "added edge " << edge.node1 << " " << edge.node2 << " " << edge.weight << endl;
+		//cout << "evaluation=" << evaluation << endl;
 	}
 	bool achou1 = false, achou2 = false;
 	for (int i=0; i < solutionNodes_vector.size() && !(achou1 && achou2); ++i) {
@@ -105,6 +107,8 @@ void Solution::removeEdge(edge_t edge) {
 	for (int i=0; i < graph[edge.node1].size(); ++i) {
 		if (graph[edge.node1][i].vertex == edge.node2) {
 			evaluation -= graph[edge.node1][i].weight;
+			//cout << "removed edge " << edge.node1 << " " << edge.node2 << " " << edge.weight << endl;
+			//cout << "evaluation=" << evaluation << endl;
 			achou = true;
 			graph[edge.node1].erase(graph[edge.node1].begin() + i);
 			edgeSet.remove(edge);
@@ -138,8 +142,12 @@ void Solution::removeEdge(edge_t edge) {
 	}
 }
 
+/*
+ * Checks if there is a solution. 
+ */
 bool Solution::isSolution() {
 	if (solutionNodes_vector.size() > 0) {
+		//cout << "isSolution: solutionNodes_vector[0] = " << solutionNodes_vector[0] << endl;
 		if (hasTerminal() && !loop(solutionNodes_vector[0]) && isConnected()) {
 			return true;
 		}
@@ -147,6 +155,10 @@ bool Solution::isSolution() {
 	return false;
 }
 
+
+/*
+ * Checks if all the nodes in the graph are connected
+ */
 bool Solution::isConnected() {
 	for (int i=0; i < solutionNodes_vector.size(); ++i) {
 		if (!wasAccessed_vector[ solutionNodes_vector[i] ]) {
@@ -156,6 +168,11 @@ bool Solution::isConnected() {
 	return true;
 }
 
+
+/*
+ * Checks if all the terminals are in the solution vector.
+ * If they are, the function returns true, otherwise it returns false.
+ */
 bool Solution::hasTerminal() {
 	bool todos = true;
 	for (int i=0; i < terminal_vector.size(); ++i) {
@@ -174,6 +191,32 @@ bool Solution::hasTerminal() {
 	return todos;
 }
 
+/*
+ * First of all the edge vector is extracted from the graph to b manipulated.
+ * Secondly, the function looks for a trivial solution.
+ */
+void Solution::trivial(Graph g) {
+	cout << "trivial" << endl;
+	vector< edge_t > edge_vector = g.getEdges().getSet();
+	int i=0;
+	while (!isSolution()) {
+		addEdge(edge_vector[i]);
+		//cout << "add edge" << endl;
+		//cout << "loop com nodo " << edge_vector[i].node1 << endl;	
+		if (loop(edge_vector[i].node1)) {
+			removeEdge(edge_vector[i]);
+			//cout << "remove edge" << endl;
+		}
+		++i;
+	}
+
+	printNodosIn();
+}
+
+/*
+ * Checks if an edge is in the edge vector. 
+ * Returns true if it is or false otherwise.
+ */
 bool Solution::exist(edge_t edge) {
 	vector< edge_t > edge_vector = edgeSet.getSet();
 	for (int i=0; i < edge_vector.size(); ++i) {
@@ -184,18 +227,9 @@ bool Solution::exist(edge_t edge) {
 	return false;
 }
 
-void Solution::trivial(Graph g) {
-	vector< edge_t > edge_vector = g.getEdges().getSet();
-	int i=0;
-	while (!isSolution()) {
-		addEdge(edge_vector[i]);
-		if (loop(edge_vector[i].node1)) {
-			removeEdge(edge_vector[i]);
-		}
-		++i;
-	}
-}
-
+/*
+ * Finds a vector os solutions based on the "this" solution.
+ */
 void Solution::createNeighborhood(vector<Solution> *solution_vector, Graph g) {
 	vector<Solution> vaux;
 	vaux.clear();

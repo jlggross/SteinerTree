@@ -1,4 +1,6 @@
 #include "../includes/graph.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 Graph::Graph(int nodesCount) {
 	graph.clear();
@@ -60,12 +62,23 @@ vector< vector<node_t> > Graph::getGraph() {
 	return graph;
 }
 
+edge_t Graph::randomEdge(int seed) {
+	return edgeSet.randomEdge(seed);
+}
+
+
+/*
+ * Check if there is a loop 
+ */
 bool Graph::hasLoop(int nodo) {
+	int a;
 	wasAccessed_vector[ nodo ] = true;
+	//cout << "hasLoop: nodo=" << nodo << endl;
 	for (int i=0; i < graph[nodo].size(); ++i) {
 		if (!graph[nodo][i].wasAccessed) {
 			graph[nodo][i].wasAccessed = true;
 			for (int j = 0; j < graph[ graph[nodo][i].vertex ].size(); j++) {
+				//cout << "hasLoop: i=" << i << ", j=" << j << ", nodo=" << nodo << ", [nodo][i].vertex=" << graph[nodo][i].vertex << endl;
 				if (graph[ graph[nodo][i].vertex ][j].vertex == nodo) {
 					graph[ graph[nodo][i].vertex ][j].wasAccessed = true;
 					break;
@@ -81,21 +94,25 @@ bool Graph::hasLoop(int nodo) {
 	return false;
 }
 
-edge_t Graph::randomEdge(int seed) {
-	return edgeSet.randomEdge(seed);
-}
-
+/*
+ * Initialization for hasLoop function.
+ */
 bool Graph::loop(int nodo) {
 	wasAccessed_vector.clear();
 	wasAccessed_vector.resize(numberOfNodes+1);
+
+	/* All nodes from the accessed list of nodes are set as not accesed */
 	for (int i=0; i < wasAccessed_vector.size(); ++i) {
 		wasAccessed_vector[i] = false;
 	}
+	
+	/* All nodes from the adjacency list are set as not accessed */	
 	for (int i=0; i < graph.size(); ++i) {
 		for (int j = 0; j < graph[i].size(); j++) {
 			graph[i][j].wasAccessed = false;
 		}
 	}
+
 	return hasLoop(nodo);
 }
 

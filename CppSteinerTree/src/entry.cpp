@@ -12,12 +12,13 @@ Graph readInput(Solution &solution) {
 		cin >> word;
 	}
 	cin >> edgeCount;
-	Solution sAux(numberOfNodes);
 	for (int i=0; i < edgeCount; ++i) {
 		edge_t edge;
 		cin >> word >> edge.node1 >> edge.node2 >> edge.weight;
 		graph.addEdge(edge);
 	}
+
+	Solution sAux(numberOfNodes);
 	while(word != "Terminals") {
 		cin >> word;
 	}

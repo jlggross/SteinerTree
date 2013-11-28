@@ -49,7 +49,7 @@ Solution searchTabu(Solution startSolution, Graph g, int iter, TabuList &lstTabu
 		cout << endl;
 		vector<Solution> neighborhood;
 		startSolution.createNeighborhood(&neighborhood,g);
-		cout << "neighborhood = " << neighborhood.size() << endl;
+		//cout << "neighborhood = " << neighborhood.size() << endl;
 		lstTabu.addTabu(startSolution);
 		int menor = startSolution.getEvaluation();
 		int tamanho = neighborhood.size();
@@ -103,12 +103,13 @@ Solution searchTabu(Solution startSolution, Graph g, int iter, TabuList &lstTabu
 }
 
 Solution searchTabuRecursive(Solution startSolution, Graph g, int iter, TabuList &lstTabu) {
-	cout << iter << "   ---   meio: " << startSolution.getEvaluation() << " optimum: " << lstTabu.getOptimum().getEvaluation() << endl;
+	cout << iter << " -- startSolution: " << startSolution.getEvaluation() << " optimum: " << lstTabu.getOptimum().getEvaluation() << endl;
 	lstTabu.printEvaluationList();
 	cout << endl;
 	if (iter < BT_MAX) {
 		vector<Solution> neighborhood;
-		startSolution.createNeighborhood(&neighborhood,g);
+		startSolution.createNeighborhood(&neighborhood,g); //creates a vector of solutions based on the startSolution
+		
 		int menor = startSolution.getEvaluation();
 		int tamanho = neighborhood.size();
 		for (int i=0; i < tamanho; ++i) {
@@ -123,17 +124,14 @@ Solution searchTabuRecursive(Solution startSolution, Graph g, int iter, TabuList
 				}
 			}
 		}
-		int indMenor = -1, valorMenor = EVALUATION_MAX;
+		
+		int valorMenor = EVALUATION_MAX;
 		for (int i=0; i < tamanho; ++i) {
 			int avaliado = neighborhood[i].getEvaluation();
 			if (avaliado < valorMenor && !lstTabu.hasSolution(neighborhood[i])) {
 				valorMenor = avaliado;
-				indMenor = i;
 				return searchTabuRecursive(neighborhood[i],g,iter+1,lstTabu);
 			}
-		}
-		if (indMenor != -1) {
-			return searchTabuRecursive(neighborhood[indMenor],g,iter+1,lstTabu);
 		}
 		return lstTabu.getOptimum();
 	} else {
