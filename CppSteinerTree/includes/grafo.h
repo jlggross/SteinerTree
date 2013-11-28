@@ -4,28 +4,28 @@
 #include "set.h"
 
 typedef struct{
-	int v;
-	int peso;
-	bool acessado;
+	int vertex;
+	int weight;
+	bool wasAccessed;
 } node_t;
 
-class Grafo {
+class Graph {
 	public:
-		Grafo(int nodos = 0);
-		void insereAresta( aresta_t a );
-		void removeAresta( aresta_t a );
+		Graph(int numberOfNodes = 0);
+		void addEdge(edge_t edge);
+		void removeEdge(edge_t edge);
 		void print();
 		vector< vector<node_t> > getGraph();
-		bool ciclo(int nodo);
-		bool temCiclo(int nodo);
-		aresta_t random(int seed);
-		Set getArestas();
+		bool loop(int nodo);
+		bool hasLoop(int nodo);
+		edge_t randomEdge(int seed);
+		Set getEdges();
 	protected:
 		vector< vector<node_t> > graph;
-		int arestas;
-		int nodos;
-		vector<bool> visitado;
-		Set setArestas;
+		int edgeCount;
+		int numberOfNodes;
+		vector<bool> wasAccessed_vector;
+		Set edgeSet;
 };
 
 #endif

@@ -3,25 +3,25 @@
 
 #define BT_MAX 40
 #define TABU_SIZE 10
-#define TEMPO_TABU 15
+#define TABU_TIME 15
 
-#define MAX_AVALIACAO 999999999
+#define EVALUATION_MAX 999999999
 
 #include "solucao.h"
 
-class Listabu {
+class TabuList {
 	public:
-		Listabu();
-		bool contem(Solucao s);
-		void insereTabu(Solucao s);
-		bool atualizaOtima( Solucao s );
-		void printOtima();
-		void printLista();
-		olucao getOtima();
-		void turno();
+		TabuList();
+		bool hasSolution(Solution s);
+		void addTabu(Solution s);
+		bool updateOptimum(Solution s);
+		void printOptimum();
+		void printEvaluationList();
+		Solucao getOptimum();
+		void round();
 	protected:
-		vector<Solucao> tabus;
-		Solucao otima;
+		vector<Solution> tabus;
+		Solution optimum;
 };
 
 #endif

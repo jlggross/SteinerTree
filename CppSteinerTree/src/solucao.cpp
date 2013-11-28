@@ -1,167 +1,167 @@
-#include "../includes/solucao.h"
+#include "../includes/Solution.h"
 
-Solucao::Solucao(int nodos) : Grafo(nodos) {
-	avaliacao = 0;
-	terminals.clear();
+Solution::Solution(int numberOfNodes) : Graph(numberOfNodes) {
+	evaluation = 0;
+	terminal_vector.clear();
 }
 
-Solucao::Solucao(const Solucao &s) {
-	arestas = s.arestas;
-	nodos = s.nodos;
-	graph = s.graph;
-	setArestas = s.setArestas;
-	terminals = s.terminals;
-	avaliacao = s.avaliacao;
-	nodosIn = s.nodosIn;
+Solution::Solution(const Solution &solution) {
+	edgeCount = solution.edgeCount;
+	numberOfNodes = solution.numberOfNodes;
+	graph = solution.graph;
+	edgeSet = solution.edgeSet;
+	terminal_vector = solution.terminal_vector;
+	evaluation = solution.evaluation;
+	solutionNodes_vector = solution.solutionNodes_vector;
 }
 
-void Solucao::insereTerminal(int t) {
-	terminals.push_back(t);
+void Solution::addTerminal(int terminal) {
+	terminal_vector.push_back(terminal);
 }
 
-vector< int > Solucao::getTerminals() {
-	return terminals;
+vector<int> Solution::getTerminals() {
+	return terminal_vector;
 }
 
-int Solucao::getAvaliacao() {
-	return avaliacao;
+int Solution::getEvaluation() {
+	return evaluation;
 }
 
-void Solucao::setAvaliacao(int x) {
-	avaliacao = x;
+void Solution::setEvaluation(int x) {
+	evaluation = x;
 }
 
-void Solucao::printTerminais() {
+void Solution::printTerminals() {
 	cout << "Terminais: ";
-	for (int i = 0; i < terminals.size(); ++i) {
-		cout << terminals[i] << " ";
+	for (int i=0; i < terminal_vector.size(); ++i) {
+		cout << terminal_vector[i] << " ";
 	}
 	cout << endl << endl;
 }
 
-void Solucao::printNodosIn() {
-	cout << "Nodos Incluidos na Solucao: " << endl;
-	for (int i = 0; i < nodosIn.size(); ++i) {
-		cout << nodosIn[i] << " ";
+void Solution::printNodosIn() {
+	cout << "Nodos Incluidos na Solution: " << endl;
+	for (int i=0; i < solutionNodes_vector.size(); ++i) {
+		cout << solutionNodes_vector[i] << " ";
 	}
 	cout << endl << endl;
 }
 
-void Solucao::print() {
-	cout << "******************************************" << endl << "---------/ SOLUCAO /--------" << endl;
-	Grafo::print();
-	if (terminals.size() > 0) {
-		printTerminais();
+void Solution::print() {
+	cout << "******************************************" << endl << "---------/ Solution /--------" << endl;
+	Graph::print();
+	if (terminal_vector.size() > 0) {
+		printTerminals();
 	}
-	if (nodosIn.size() > 0) {
+	if (solutionNodes_vector.size() > 0) {
 		printNodosIn();
 	}
-	cout << "Avaliacao = " << avaliacao << endl;
-	if (ehSolucao()) {
-		cout << "Solucao Valida." << endl;
+	cout << "Avaliacao = " << evaluation << endl;
+	if (isSolution()) {
+		cout << "Solution Valida." << endl;
 	} else {
-		cout << "Solucao Invalida!" << endl;
+		cout << "Solution Invalida!" << endl;
 	}
 	cout << "******************************************" << endl << endl;
 }
 
-void Solucao::insereAresta(aresta_t a) {
-	node_t n;
-	n.peso = a.peso;
-	n.v = a.n1;
+void Solution::addEdge(edge_t edge) {
+	node_t newNode;
+	newNode.weight = edge.weight;
+	newNode.vertex = edge.node1;
 	bool achou0 = false;
-	for (int i = 0; i < graph[ a.n2 ].size() && !achou0; ++i) {
-		if (graph[ a.n2 ][i].v == n.v) {
+	for (int i=0; i < graph[ edge.node2 ].size() && !achou0; ++i) {
+		if (graph[ edge.node2 ][i].vertex == newNode.vertex) {
 			achou0 = true;
 			break;
 		}
 	}
 	if (!achou0) {
-		graph[ a.n2 ].push_back(n);
-		n.v = a.n2;
-		graph[ a.n1 ].push_back(n);
-		++arestas;
-		setArestas.insere(a);
-		avaliacao += a.peso;
+		graph[ edge.node2 ].push_back(newNode);
+		newNode.vertex = edge.node2;
+		graph[ edge.node1 ].push_back(newNode);
+		++edgeCount;
+		edgeSet.add(edge);
+		evaluation += edge.weight;
 	}
 	bool achou1 = false, achou2 = false;
-	for (int i = 0; i < nodosIn.size() && !(achou1 && achou2); ++i) {
-		if (nodosIn[i] == a.n1) {
+	for (int i=0; i < solutionNodes_vector.size() && !(achou1 && achou2); ++i) {
+		if (solutionNodes_vector[i] == edge.node1) {
 			achou1 = true;
-		} else if (nodosIn[i] == a.n2) {
+		} else if (solutionNodes_vector[i] == edge.node2) {
 			achou2 = true;
 		}
 	}
 	if (!achou1) {
-		nodosIn.push_back(a.n1);
+		solutionNodes_vector.push_back(edge.node1);
 	}
 	if (!achou2) {
-		nodosIn.push_back(a.n2);
+		solutionNodes_vector.push_back(edge.node2);
 	}
 }
 
-void Solucao::removeAresta(aresta_t a) {
+void Solution::removeEdge(edge_t edge) {
 	bool achou = false;
-	for (int i = 0; i < graph[a.n1].size(); ++i) {
-		if (graph[a.n1][i].v == a.n2) {
-			avaliacao -= graph[a.n1][i].peso;
+	for (int i=0; i < graph[edge.node1].size(); ++i) {
+		if (graph[edge.node1][i].vertex == edge.node2) {
+			evaluation -= graph[edge.node1][i].weight;
 			achou = true;
-			graph[a.n1].erase(graph[a.n1].begin() + i);
-			setArestas.remove(a);
+			graph[edge.node1].erase(graph[edge.node1].begin() + i);
+			edgeSet.remove(edge);
 			break;
 		}
 	}
 	if (achou) {
-		for (int i = 0; i < graph[a.n2].size(); ++i) {
-			if (graph[a.n2][i].v == a.n1) {
-				graph[a.n2].erase(graph[a.n2].begin() + i);
+		for (int i=0; i < graph[edge.node2].size(); ++i) {
+			if (graph[edge.node2][i].vertex == edge.node1) {
+				graph[edge.node2].erase(graph[edge.node2].begin() + i);
 				break;
 			}
 		}
-		--arestas;
+		--edgeCount;
 	}
-	if (graph[a.n1].empty()) {
-		for (int i = 0; i < nodosIn.size(); ++i) {
-			if (nodosIn[i] == a.n1) {
-				nodosIn.erase(nodosIn.begin() + i);
+	if (graph[edge.node1].empty()) {
+		for (int i=0; i < solutionNodes_vector.size(); ++i) {
+			if (solutionNodes_vector[i] == edge.node1) {
+				solutionNodes_vector.erase(solutionNodes_vector.begin() + i);
 				break;
 			}
 		}
 	}
-	if (graph[a.n2].empty()) {
-		for (int i = 0; i < nodosIn.size(); ++i) {
-			if (nodosIn[i] == a.n2) {
-				nodosIn.erase(nodosIn.begin() + i);
+	if (graph[edge.node2].empty()) {
+		for (int i=0; i < solutionNodes_vector.size(); ++i) {
+			if (solutionNodes_vector[i] == edge.node2) {
+				solutionNodes_vector.erase(solutionNodes_vector.begin() + i);
 				break;
 			}
 		}
 	}
 }
 
-bool Solucao::ehSolucao() {
-	if (nodosIn.size() > 0) {
-		if (temTerminais() && !ciclo(nodosIn[0]) && ehConexo()) {
+bool Solution::isSolution() {
+	if (solutionNodes_vector.size() > 0) {
+		if (hasTerminal() && !loop(solutionNodes_vector[0]) && isConnected()) {
 			return true;
 		}
 	}
 	return false;
 }
 
-bool Solucao::ehConexo() {
-	for (int i = 0; i < nodosIn.size(); ++i) {
-		if (!visitado[ nodosIn[i] ]) {
+bool Solution::isConnected() {
+	for (int i=0; i < solutionNodes_vector.size(); ++i) {
+		if (!wasAccessed_vector[ solutionNodes_vector[i] ]) {
 			return false;
 		}
 	}
 	return true;
 }
 
-bool Solucao::temTerminais() {
+bool Solution::hasTerminal() {
 	bool todos = true;
-	for (int i = 0; i < terminals.size(); ++i) {
+	for (int i=0; i < terminal_vector.size(); ++i) {
 		bool achou = false;
-		for (int j = 0; j < nodosIn.size(); j++) {
-			if (terminals[i] == nodosIn[j]) {
+		for (int j = 0; j < solutionNodes_vector.size(); j++) {
+			if (terminal_vector[i] == solutionNodes_vector[j]) {
 				achou = true;
 				break;
 			}
@@ -174,78 +174,78 @@ bool Solucao::temTerminais() {
 	return todos;
 }
 
-bool Solucao::existe(aresta_t a) {
-	vector< aresta_t > arestas = setArestas.getConjunto();
-	for (int i = 0; i < arestas.size(); ++i) {
-		if (((a.n1 == arestas[i].n1) && (a.n2 == arestas[i].n2) && (a.peso == arestas[i].peso)) || ((a.n1 == arestas[i].n2) && (a.n2 == arestas[i].n1) && (a.peso == arestas[i].peso))) {
+bool Solution::exist(edge_t edge) {
+	vector< edge_t > edge_vector = edgeSet.getSet();
+	for (int i=0; i < edge_vector.size(); ++i) {
+		if (((edge.node1 == edge_vector[i].node1) && (edge.node2 == edge_vector[i].node2) && (edge.weight == edge_vector[i].weight)) || ((edge.node1 == edge_vector[i].node2) && (edge.node2 == edge_vector[i].node1) && (edge.weight == edge_vector[i].weight))) {
 			return true;
 		}
 	}
 	return false;
 }
 
-void Solucao::trivial(Grafo g) {
-	vector< aresta_t > arestas = g.getArestas().getConjunto();
-	int i = 0;
-	while (!ehSolucao()) {
-		insereAresta(arestas[i]);
-		if (ciclo(arestas[i].n1)) {
-			removeAresta(arestas[i]);
+void Solution::trivial(Graph g) {
+	vector< edge_t > edge_vector = g.getEdges().getSet();
+	int i=0;
+	while (!isSolution()) {
+		addEdge(edge_vector[i]);
+		if (loop(edge_vector[i].node1)) {
+			removeEdge(edge_vector[i]);
 		}
 		++i;
 	}
 }
 
-void Solucao::criaVizinhos(vector<Solucao> *v, Grafo g) {
-	vector<Solucao> vaux;
+void Solution::createNeighborhood(vector<Solution> *solution_vector, Graph g) {
+	vector<Solution> vaux;
 	vaux.clear();
-	vector< aresta_t > arestas = g.getArestas().getConjunto();
-	for (int i = 0; i < arestas.size(); ++i) {
-		aresta_t a = arestas[i];
-		Solucao viz(*this);
-		if (viz.existe(a)) {
-			viz.removeAresta(a);
-			if (viz.ehSolucao()) {
+	vector< edge_t > edgeCount = g.getEdges().getSet();
+	for (int i=0; i < edgeCount.size(); ++i) {
+		edge_t edge = edgeCount[i];
+		Solution viz(*this);
+		if (viz.exist(edge)) {
+			viz.removeEdge(edge);
+			if (viz.isSolution()) {
 				vaux.push_back(viz);
 			}
-			for (int j = 0; j < arestas.size(); ++j) {
+			for (int j = 0; j < edgeCount.size(); ++j) {
 				if (i == j) {
 					continue;
 				}
-				aresta_t b = arestas[j];
-				if (!viz.existe(b)) {
-					viz.insereAresta(b);
-					if (viz.ehSolucao()) {
+				edge_t b = edgeCount[j];
+				if (!viz.exist(b)) {
+					viz.addEdge(b);
+					if (viz.isSolution()) {
 						vaux.push_back(viz);
 					}
-					viz.removeAresta(b);
+					viz.removeEdge(b);
 				}
 			}
 		}
 	}
-	(*v) = vaux;
+	(*solution_vector) = vaux;
 }
 
-void Solucao::printPontuacao() {
-	cout << "Avaliacao = " << avaliacao << endl << endl;
+void Solution::printScore() {
+	cout << "Avaliacao = " << evaluation << endl << endl;
 }
 
-void Solucao::incTabu() {
-	++contTabu;
+void Solution::incTabu() {
+	++tabuCount;
 }
 
-void Solucao::setTabu(int x) {
-	contTabu = x;
+void Solution::setTabu(int x) {
+	tabuCount = x;
 }
 
-int Solucao::getTabu() {
-	return contTabu;
+int Solution::getTabu() {
+	return tabuCount;
 }
 
-aresta_t Solucao::getInserida() {
+edge_t Solution::getAddedEdge() {
 	
 }
 
-aresta_t Solucao::getRemovida() {
+edge_t Solution::getRemovedEdge() {
 	
 }

@@ -1,27 +1,27 @@
 #include "../includes/set.h"
 
 Set::Set() {
-	conjunto.clear();
+	edge_vector.clear();
 }
 
-void Set::insere(aresta_t a) {
-	conjunto.push_back(a);
+void Set::add(edge_t edge) {
+	edge_vector.push_back(edge);
 }
 
-void Set::remove(aresta_t a) {
-	for (int i = 0; i < conjunto.size(); ++i) {
-		if (((conjunto[i].n1 == a.n1) && (conjunto[i].n2 == a.n2) && (conjunto[i].peso == a.peso)) || ((conjunto[i].n1 == a.n2) && (conjunto[i].n2 == a.n1) && (conjunto[i].peso == a.peso))) {
-			conjunto.erase(conjunto.begin() + i);
+void Set::remove(edge_t edge) {
+	for (int i=0; i < edge_vector.size(); ++i) {
+		if (((edge_vector[i].node1 == edge.node1) && (edge_vector[i].node2 == edge.node2) && (edge_vector[i].weight == edge.weight)) || ((edge_vector[i].node1 == edge.node2) && (edge_vector[i].node2 == edge.node1) && (edge_vector[i].weight == edge.weight))) {
+			edge_vector.erase(edge_vector.begin() + i);
 			break;
 		}
 	}
 }
 
-vector< aresta_t > Set::getConjunto() {
-	return conjunto;
+vector< edge_t > Set::getSet() {
+	return edge_vector;
 }
 
-aresta_t Set::aleatoria(int seed) {
+edge_t Set::randomEdge(int seed) {
 	srand(seed);
-	return conjunto[rand() % conjunto.size()];
+	return edge_vector[rand() % edge_vector.size()];
 }

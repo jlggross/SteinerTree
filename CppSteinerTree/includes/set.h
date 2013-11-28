@@ -4,22 +4,23 @@
 #include <vector>
 #include <iostream>
 #include <cstdlib>
+
 using namespace std;
 
 typedef struct{
-	int n1, n2;
-	int peso;
-} aresta_t;
+	int node1, node2;
+	int weight;
+} edge_t;
 
 class Set {
 	public:
 		Set();
-		void insere(aresta_t a);
-		void remove(aresta_t a);
-		vector< aresta_t > getConjunto();
-		aresta_t aleatoria(int seed);
+		void add(edge_t edge);
+		void remove(edge_t edge);
+		vector< edge_t > getSet();
+		edge_t randomEdge(int seed);
 	protected:
-		vector< aresta_t > conjunto;
+		vector< edge_t > edge_vector;
 };
 
 #endif

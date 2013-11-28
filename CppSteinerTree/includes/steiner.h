@@ -6,6 +6,6 @@
 #include <string>
 #include "solucao.h"
 
-Grafo leEntrada( Solucao &s );
+Graph readInput(Solution &solution);
 
 #endif

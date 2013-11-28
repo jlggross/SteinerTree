@@ -1,56 +1,56 @@
 #include "../includes/listabu.h"
 
-Listabu::Listabu() {
+TabuList::TabuList() {
 	tabus.clear();
-	otima.setAvaliacao(MAX_AVALIACAO);
+	optimum.setEvaluation(EVALUATION_MAX);
 }
 
-bool Listabu::contem(Solucao s) {
-	int valor = s.getAvaliacao();
-	for (int i = 0; i < tabus.size(); ++i) {
-		if (valor == tabus[i].getAvaliacao()) {
+bool TabuList::hasSolution(Solution solution) {
+	int valor = solution.getEvaluation();
+	for (int i=0; i < tabus.size(); ++i) {
+		if (valor == tabus[i].getEvaluation()) {
 			return true;
 		}
 	}
 	return false;
 }
 
-void Listabu::insereTabu(Solucao s) {
-	s.setTabu(TEMPO_TABU);
-	tabus.push_back(s);
+void TabuList::addTabu(Solution solution) {
+	solution.setTabu(TABU_TIME);
+	tabus.push_back(solution);
 	if (tabus.size() == TABU_SIZE) {
 		tabus.erase(tabus.begin());
 	}
 }
 
-bool Listabu::atualizaOtima(Solucao s) {
-	if (s.getAvaliacao() < otima.getAvaliacao()) {
-		otima = s;
+bool TabuList::updateOptimum(Solution solution) {
+	if (solution.getEvaluation() < optimum.getEvaluation()) {
+		optimum = solution;
 		return true;
 	}
 	return false;
 }
 
-void Listabu::printLista() {
+void TabuList::printEvaluationList() {
 	cout << "Lista Tabu = ";
-	for (int i = 0; i < tabus.size(); ++i) {
-		cout << tabus[i].getAvaliacao() << " ";
+	for (int i=0; i < tabus.size(); ++i) {
+		cout << tabus[i].getEvaluation() << " ";
 	}
 	cout << endl;
 }
 
-void Listabu::printOtima() {
-	otima.printPontuacao();
+void TabuList::printOptimum() {
+	optimum.printScore();
 }
 
-Solucao Listabu::getOtima() {
-	return otima;
+Solution TabuList::getOptimum() {
+	return optimum;
 }
 
-void Listabu::turno() {
-	for (int i = 0; i < tabus.size(); ++i) {
+void TabuList::round() {
+	for (int i=0; i < tabus.size(); ++i) {
 		tabus[i].incTabu();
-		if (tabus[i].getTabu() > TEMPO_TABU) {
+		if (tabus[i].getTabu() > TABU_TIME) {
 			tabus.erase(tabus.begin() + i);
 		}
 	}

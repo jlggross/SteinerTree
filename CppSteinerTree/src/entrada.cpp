@@ -1,39 +1,39 @@
 #include "../includes/steiner.h"
 
-Grafo leEntrada(Solucao &s) {
-	int nodos, arestas, terminais;
-	string palavra = "";
-	while(palavra != "Nodes") {
-		cin >> palavra;
+Graph readInput(Solution &solution) {
+	int numberOfNodes, edgeCount, terminais;
+	string word = "";
+	while(word != "Nodes") {
+		cin >> word;
 	}
-	cin >> nodos;
-	Grafo graph(nodos);
-	while(palavra != "Edges") {
-		cin >> palavra;
+	cin >> numberOfNodes;
+	Graph graph(numberOfNodes);
+	while(word != "Edges") {
+		cin >> word;
 	}
-	cin >> arestas;
-	Solucao sAux(nodos);
-	for (int i = 0; i < arestas; ++i) {
-		aresta_t a;
-		cin >> palavra >> a.n1 >> a.n2 >> a.peso;
-		graph.insereAresta(a);
+	cin >> edgeCount;
+	Solution sAux(numberOfNodes);
+	for (int i=0; i < edgeCount; ++i) {
+		edge_t edge;
+		cin >> word >> edge.node1 >> edge.node2 >> edge.weight;
+		graph.addEdge(edge);
 	}
-	while(palavra != "Terminals") {
-		cin >> palavra;
+	while(word != "Terminals") {
+		cin >> word;
 	}
-	palavra = "";
-	while(palavra != "Terminals") {
-		cin >> palavra;
+	word = "";
+	while(word != "Terminals") {
+		cin >> word;
 	}
 	cin >> terminais;
-	for (int i = 0; i < terminais; ++i) {
-		int t;
-		cin >> palavra >> t;
-		sAux.insereTerminal(t);	
+	for (int i=0; i < terminais; ++i) {
+		int terminal;
+		cin >> word >> terminal;
+		sAux.addTerminal(terminal);	
 	}
-	s = sAux;
-	while(palavra != "EOF") {
-		cin >> palavra;
+	solution = sAux;
+	while(word != "EOF") {
+		cin >> word;
 	}
 	return graph;
 }

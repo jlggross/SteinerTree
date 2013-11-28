@@ -1,79 +1,79 @@
 #include "../includes/grafo.h"
 
-Grafo::Grafo(int nroNodos) {
+Graph::Graph(int nodesCount) {
 	graph.clear();
-	graph.resize(nroNodos+1);
-	for (int i = 0; i < nroNodos+1; ++i) {
+	graph.resize(nodesCount+1);
+	for (int i=0; i < nodesCount+1; ++i) {
 		graph[i].clear();
 	}
-	nodos = nroNodos;
-	arestas = 0;
+	numberOfNodes = nodesCount;
+	edgeCount = 0;
 }
 
-void Grafo::insereAresta(aresta_t a) {
-	node_t n;
-	n.peso = a.peso;
-	n.v = a.n1;
-	graph[ a.n2 ].push_back(n);
-	n.v = a.n2;
-	graph[ a.n1 ].push_back(n);
-	++arestas;
-	setArestas.insere(a);
+void Graph::addEdge(edge_t edge) {
+	node_t newNode;
+	newNode.weight = edge.weight;
+	newNode.vertex = edge.node1;
+	graph[ edge.node2 ].push_back(newNode);
+	newNode.vertex = edge.node2;
+	graph[ edge.node1 ].push_back(newNode);
+	++edgeCount;
+	edgeSet.add(edge);
 }
 		
-void Grafo::removeAresta(aresta_t a) {
+void Graph::removeEdge(edge_t edge) {
 	bool achou = false;
-	for (int i = 0; i < graph[a.n1].size(); ++i) {
-		if (graph[a.n1][i].v == a.n2) {
+	for (int i=0; i < graph[edge.node1].size(); ++i) {
+		if (graph[edge.node1][i].vertex == edge.node2) {
 			achou = true;
-			graph[a.n1].erase(graph[a.n1].begin() + i);
+			graph[edge.node1].erase(graph[edge.node1].begin() + i);
 			break;
 		}
 	}
 	if (achou) {
-		for (int i = 0; i < graph[a.n2].size(); ++i)
+		for (int i=0; i < graph[edge.node2].size(); ++i)
 		{
-		   if (graph[a.n2][i].v == a.n1)
+		   if (graph[edge.node2][i].vertex == edge.node1)
 		   {
-			  graph[a.n2].erase(graph[a.n2].begin() + i);
+			  graph[edge.node2].erase(graph[edge.node2].begin() + i);
 			  break;
 		   }
 		}
-		--arestas;
+		--edgeCount;
 	}
-	setArestas.remove(a);
+	edgeSet.remove(edge);
 }
 
-void Grafo::print() {
-	cout << "         IMPRESSAO DO GRAFO" << endl << "Numero de nodos: " << nodos << endl << "Numero de arestas: " << arestas << endl << endl << "--- ARESTAS ---" << endl;
-	for (int i = 1; i < nodos+1; ++i) {
+void Graph::print() {
+	cout << "         IMPRESSAO DO GRAFO" << endl << "Numero de nodos: " << numberOfNodes << endl << "Numero de arestas: " << edgeCount << endl << endl << "--- ARESTAS ---" << endl;
+	for (int i = 1; i < numberOfNodes+1; ++i) {
 		cout << i << " : " ;
 		for (int j = 0; j < graph[i].size(); j++) {
-			cout << "[" << graph[i][j].v << " " << graph[i][j].peso << "]" << " ";
+			cout << "[" << graph[i][j].vertex << " " << graph[i][j].weight << "]" << " ";
 		}
 		cout << endl;
 	}
 	cout << endl;
 }
 
-vector< vector<node_t> > Grafo::getGraph() {
+vector< vector<node_t> > Graph::getGraph() {
 	return graph;
 }
 
-bool Grafo::temCiclo(int nodo) {
-	visitado[ nodo ] = true;
-	for (int i = 0; i < graph[nodo].size(); ++i) {
-		if (!graph[nodo][i].acessado) {
-			graph[nodo][i].acessado = true;
-			for (int j = 0; j < graph[ graph[nodo][i].v ].size(); j++) {
-				if (graph[ graph[nodo][i].v ][j].v == nodo) {
-					graph[ graph[nodo][i].v ][j].acessado = true;
+bool Graph::hasLoop(int nodo) {
+	wasAccessed_vector[ nodo ] = true;
+	for (int i=0; i < graph[nodo].size(); ++i) {
+		if (!graph[nodo][i].wasAccessed) {
+			graph[nodo][i].wasAccessed = true;
+			for (int j = 0; j < graph[ graph[nodo][i].vertex ].size(); j++) {
+				if (graph[ graph[nodo][i].vertex ][j].vertex == nodo) {
+					graph[ graph[nodo][i].vertex ][j].wasAccessed = true;
 					break;
 				}
 			}
-			if (visitado[ graph[nodo][i].v ]) {
+			if (wasAccessed_vector[ graph[nodo][i].vertex ]) {
 				return true;
-			} else if (temCiclo(graph[nodo][i].v)) {
+			} else if (hasLoop(graph[nodo][i].vertex)) {
 				return true;
 			}
 		}
@@ -81,24 +81,24 @@ bool Grafo::temCiclo(int nodo) {
 	return false;
 }
 
-aresta_t Grafo::random(int seed) {
-	return setArestas.aleatoria(seed);
+edge_t Graph::randomEdge(int seed) {
+	return edgeSet.randomEdge(seed);
 }
 
-bool Grafo::ciclo(int nodo) {
-	visitado.clear();
-	visitado.resize(nodos+1);
-	for (int i = 0; i < visitado.size(); ++i) {
-		visitado[i] = false;
+bool Graph::loop(int nodo) {
+	wasAccessed_vector.clear();
+	wasAccessed_vector.resize(numberOfNodes+1);
+	for (int i=0; i < wasAccessed_vector.size(); ++i) {
+		wasAccessed_vector[i] = false;
 	}
-	for (int i = 0; i < graph.size(); ++i) {
+	for (int i=0; i < graph.size(); ++i) {
 		for (int j = 0; j < graph[i].size(); j++) {
-			graph[i][j].acessado = false;
+			graph[i][j].wasAccessed = false;
 		}
 	}
-	return temCiclo(nodo);
+	return hasLoop(nodo);
 }
 
-Set Grafo::getArestas() {
-	return setArestas;
+Set Graph::getEdges() {
+	return edgeSet;
 }

@@ -1,16 +1,16 @@
 #ifndef BUSCAS_H
 #define BUSCAS_H
 
-#define ITER_MAX 100
+#define ITERATION_MAX 100
 
 #include <iostream>
 #include <string>
 #include "solucao.h"
 #include "listabu.h"
 
-Solucao buscaLocalMelhor(Solucao inicial, Grafo g, int inter);
-Solucao buscaLocalPrimeira(Solucao inicial, Grafo g,int inter);
-Solucao buscaTabu(Solucao inicial, Grafo g, int inter, Listabu &listaTabu);
-Solucao buscaTabuRec(Solucao inicial, Grafo g, int inter, Listabu &listaTabu);
+Solution searchBestLocal(Solution startSolution, Graph g, int inter);
+Solution searchFirstLocal(Solution startSolution, Graph g, int inter);
+Solution searchTabu(Solution startSolution, Graph g, int inter, TabuList &lstTabu);
+Solution searchTabuRecursive(Solution startSolution, Graph g, int inter, TabuList &lstTabu);
 
 #endif
