@@ -2,7 +2,7 @@
 
 Solution searchTabu(Solution startSolution, Graph g, int iter, TabuList &lstTabu) {
 	while (iter < BT_MAX) {
-		//cout << iter << " -- startSolution: " << startSolution.getEvaluation() << " optimum: " << lstTabu.getOptimum().getEvaluation() << endl;
+		cout << iter << " -- startSolution: " << startSolution.getEvaluation() << " optimum: " << lstTabu.getOptimum().getEvaluation() << endl;
 		//lstTabu.printEvaluationList();
 		//cout << endl;
 
@@ -15,7 +15,6 @@ Solution searchTabu(Solution startSolution, Graph g, int iter, TabuList &lstTabu
 		int neighborhoodSize = neighborhood.size();
 		bool achou = false;
 		int indexMenor = -1;
-
 		
 		for (int i = 0; i < neighborhoodSize; ++i) {
 			int avaliado = neighborhood[i].getEvaluation();

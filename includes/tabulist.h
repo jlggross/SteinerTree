@@ -1,7 +1,7 @@
 #ifndef LISTA_TABU_H
 #define LISTA_TABU_H
 
-#define BT_MAX 400
+#define BT_MAX 150
 #define TABU_SIZE 10
 #define TABU_TIME 15
 

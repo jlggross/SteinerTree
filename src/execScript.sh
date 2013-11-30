@@ -1,6 +1,7 @@
 #!/bin/sh
 
-FILES="b14 c01 mc11 brasil58 cc3-4p i160-003 i160-033 d10 hc10p e20"
+#FILES="b14 c01 mc11 brasil58 cc3-4p i160-003 i160-033 d10 hc10p e20"
+FILES="d10"
 
 make clean
 make -B

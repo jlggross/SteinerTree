@@ -3,8 +3,7 @@
 
 #include "graph.h"
 
-#define MAX_NEIGHBORHOOD 400
-
+#define FATOR_VIZINHOS 8
 
 class Solution : public Graph {
 	public:

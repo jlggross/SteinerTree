@@ -4,6 +4,54 @@ Este pseudo código é um resumo da execução da heurística de busca tabu
 para o problema de árvores de steiner. A execução do pseudo-código 
 começa na função SteinerTree_TabuSearch().
 
+------------------------------------------------------------------------
+
+SteinerTree_TabuSearch()
+	captura tempo inicial t1
+	lê arquivo de entrada contendo a instância
+	cria grafo g e o inicializa com a tabela de adjacência 	
+	cria solução trivial s, contendo uma solução inicial	
+	seta a solução ótima da busca tabu como sendo a solução inicial s
+	inicializa lstTabu, lista de tabus, com zero elementos
+	BuscaTabu(s, g, 0, lstTabu)					
+	captura tempo final t2
+	calcula tempo de execução t2 - t1
+end-function
+
+BuscaTabuIterativa(s, g, lstTabu)	
+	enquanto iterações < tabuSearchMAX faz
+		adiciona s à lstTabu
+		cria vetor neighbors de soluções vizinhas à solução inicial
+		para cada solução i de neighbors faz
+			se i < s and i != soluções da lista tabu, então
+			se i < ianterior
+			guarda i como melhor solução até agora
+		end-se
+			end-se
+		end-para cada
+
+		se foi encontrada solução melhor que s?, então
+			s = i
+			atualiza solução ótima na lstTabu com s
+			iterações = 0
+		end-se, senão
+			procura menor solução de neighbors
+			se foi encontrada menor solução de neighbors?, então
+				s = menor solução de neighbors
+				atualiza solução ótima na lstTabu com s
+				se solução ótima lstTabu foi atualizada, então
+				iterações = 0
+				end-se
+			end-se
+			se não foi encontrada solução em neighbors?, então
+				s = lstTabu.otima
+			end-se
+		end-senão
+	end-enquanto
+	return lstTabu.otima
+end-function
+
+------------------------------------------------------------------------
 
 SteinerTree_TabuSearch()
 	captura tempo inicial t1
@@ -21,7 +69,7 @@ SteinerTree_TabuSearch()
 end-function
 
 
-BuscaTabu(s, g, it, lstTabu)	
+BuscaTabuRecursiva(s, g, it, lstTabu)	
 	se iterações < tabuSearchMAX faz
 		cria vetor neighbors de soluções vizinhas à solução inicial
 		para cada solução i de neighbors faz
@@ -49,5 +97,6 @@ BuscaTabu(s, g, it, lstTabu)
 	end-senão
 end-function
 
+-------------------------------------------------------------------------
 
 
