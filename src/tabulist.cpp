@@ -46,12 +46,3 @@ void TabuList::printOptimum() {
 Solution TabuList::getOptimum() {
 	return optimum;
 }
-
-void TabuList::round() {
-	for (int i=0; i < tabus.size(); ++i) {
-		tabus[i].incTabu();
-		if (tabus[i].getTabu() > TABU_TIME) {
-			tabus.erase(tabus.begin() + i);
-		}
-	}
-}

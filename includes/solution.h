@@ -3,6 +3,9 @@
 
 #include "graph.h"
 
+#define MAX_NEIGHBORHOOD 400
+
+
 class Solution : public Graph {
 	public:
 		Solution(int numberOfNodes = 0);

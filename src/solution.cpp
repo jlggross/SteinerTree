@@ -231,19 +231,24 @@ void Solution::createNeighborhood(vector<Solution> *solution_vector, Graph g) {
 	vector<Solution> vaux;
 	vaux.clear();
 	vector< edge_t > edgeCount = g.getEdges().getSet();
-	for (int i=0; i < edgeCount.size(); ++i) {
-		edge_t edge = edgeCount[i];
+	
+	int edgeCountSize = edgeCount.size();
+	int size = edgeCountSize / 4;
+	for (int i=0; i < size; ++i) {
+		int index = rand() % (edgeCountSize - 1);
+		edge_t edge = edgeCount[index];
 		Solution viz(*this);
 		if (viz.exist(edge)) {
 			viz.removeEdge(edge);
 			if (viz.isSolution()) {
 				vaux.push_back(viz);
 			}
-			for (int j = 0; j < edgeCount.size(); ++j) {
-				if (i == j) {
+			for (int j = 0; j < size; ++j) {
+				int index2 = rand() % (edgeCountSize - 1);
+				if (index == index2) {
 					continue;
 				}
-				edge_t b = edgeCount[j];
+				edge_t b = edgeCount[index2];
 				if (!viz.exist(b)) {
 					viz.addEdge(b);
 					if (viz.isSolution()) {

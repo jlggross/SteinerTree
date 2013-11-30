@@ -1,7 +1,7 @@
 #ifndef LISTA_TABU_H
 #define LISTA_TABU_H
 
-#define BT_MAX 40
+#define BT_MAX 400
 #define TABU_SIZE 10
 #define TABU_TIME 15
 
@@ -18,7 +18,6 @@ class TabuList {
 		void printOptimum();
 		void printEvaluationList();
 		Solution getOptimum();
-		void round();
 	protected:
 		vector<Solution> tabus;
 		Solution optimum;

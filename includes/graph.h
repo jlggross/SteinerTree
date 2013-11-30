@@ -1,6 +1,7 @@
 #ifndef GRAFO_H
 #define GRAFO_H
 
+#include <stdlib.h>
 #include "set.h"
 
 typedef struct{
@@ -18,6 +19,7 @@ class Graph {
 		vector< vector<node_t> > getGraph();
 		bool loop(int nodo);
 		bool hasLoop(int nodo);
+		edge_t getRandomEdge();
 		Set getEdges();
 	protected:
 		vector< vector<node_t> > graph;

@@ -1,8 +1,6 @@
 #ifndef BUSCAS_H
 #define BUSCAS_H
 
-#define ITERATION_MAX 100
-
 #include <iostream>
 #include <string>
 #include "solution.h"

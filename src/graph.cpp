@@ -111,6 +111,19 @@ bool Graph::loop(int nodo) {
 	return hasLoop(nodo);
 }
 
+edge_t Graph::getRandomEdge() {
+	int random = rand() % (edgeSet.getSet().size() - 1);
+	return edgeSet.getEdgeByIndex(random);
+}
+
+
 Set Graph::getEdges() {
 	return edgeSet;
 }
+
+
+
+
+
+
+

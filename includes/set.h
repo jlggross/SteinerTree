@@ -18,6 +18,7 @@ class Set {
 		void add(edge_t edge);
 		void remove(edge_t edge);
 		vector< edge_t > getSet();
+		edge_t getEdgeByIndex(int i);
 	protected:
 		vector< edge_t > edge_vector;
 };

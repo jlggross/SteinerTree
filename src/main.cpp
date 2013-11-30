@@ -5,6 +5,8 @@
 int main() {
 	Graph graph;
 	Solution solution;
+	srand (time(NULL));
+
 	graph = readInput(solution);
 	time_t time1 = time(NULL);
 	solution.trivial(graph);
@@ -15,7 +17,7 @@ int main() {
 	Solution melhor, primeira, tabu;
 	TabuList lstTabu;
 	lstTabu.updateOptimum(solution);
-	tabu = searchTabuRecursive(solution,graph,0,lstTabu);
+	tabu = searchTabu(solution,graph,0,lstTabu);
 	time2 = time(NULL);
 	diff = difftime(time2,time1);
 	cout << "Tempo gasto = " << diff << "segs" << endl;

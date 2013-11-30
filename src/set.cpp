@@ -20,3 +20,7 @@ void Set::remove(edge_t edge) {
 vector< edge_t > Set::getSet() {
 	return edge_vector;
 }
+
+edge_t Set::getEdgeByIndex(int i) {
+	return edge_vector[i];
+}
