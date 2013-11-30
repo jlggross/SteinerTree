@@ -201,8 +201,11 @@ void Solution::trivial(Graph g) {
 	int i=0;
 	while (!isSolution()) {
 		addEdge(edge_vector[i]);
+		//cout << "add edge" << endl;
+		//cout << "loop com nodo " << edge_vector[i].node1 << endl;	
 		if (loop(edge_vector[i].node1)) {
 			removeEdge(edge_vector[i]);
+			//cout << "remove edge" << endl;
 		}
 		++i;
 	}

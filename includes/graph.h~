@@ -18,6 +18,7 @@ class Graph {
 		vector< vector<node_t> > getGraph();
 		bool loop(int nodo);
 		bool hasLoop(int nodo);
+		edge_t randomEdge(int seed);
 		Set getEdges();
 	protected:
 		vector< vector<node_t> > graph;

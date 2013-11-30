@@ -1,5 +1,47 @@
 #include "../includes/search.h"
 
+Solution searchBestLocal(Solution startSolution, Graph g, int iter) {
+	cout << iter << "   ---   meio: " << startSolution.getEvaluation() << endl;
+	if (iter < ITERATION_MAX) {
+		vector<Solution> neighborhood;
+		startSolution.createNeighborhood(&neighborhood,g);
+		int posMenor = -1;
+		int menor = startSolution.getEvaluation();
+		for (int i=0; i < neighborhood.size(); ++i) {
+			int avaliado = neighborhood[i].getEvaluation();
+			if (avaliado < menor) {
+				menor = avaliado;
+				posMenor = i;
+			}
+		}
+		if (posMenor == -1) {
+			return startSolution;
+		} else {
+			return searchBestLocal(neighborhood[posMenor],g,iter+1);
+		}
+	} else {
+		return startSolution;
+	}
+}
+
+Solution searchFirstLocal(Solution startSolution, Graph g, int iter) {
+	cout << iter << "   ---   meio: " << startSolution.getEvaluation() << endl;
+	if (iter < ITERATION_MAX) {
+		vector<Solution> neighborhood;
+		startSolution.createNeighborhood(&neighborhood,g);
+		int menor = startSolution.getEvaluation();
+		for (int i=0; i < neighborhood.size(); ++i) {
+			int avaliado = neighborhood[i].getEvaluation();
+			if (avaliado < menor) {
+				return searchFirstLocal(neighborhood[i], g, iter+1);
+			}
+		}
+		return startSolution;
+	} else {
+		return startSolution;
+	}
+}
+
 Solution searchTabu(Solution startSolution, Graph g, int iter, TabuList &lstTabu) {
 	while (iter < BT_MAX) {
 		cout << iter << "   ---   meio: " << startSolution.getEvaluation() << " optimum: " << lstTabu.getOptimum().getEvaluation() << endl;

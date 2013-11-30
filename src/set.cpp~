@@ -20,3 +20,8 @@ void Set::remove(edge_t edge) {
 vector< edge_t > Set::getSet() {
 	return edge_vector;
 }
+
+edge_t Set::randomEdge(int seed) {
+	srand(seed);
+	return edge_vector[rand() % edge_vector.size()];
+}
