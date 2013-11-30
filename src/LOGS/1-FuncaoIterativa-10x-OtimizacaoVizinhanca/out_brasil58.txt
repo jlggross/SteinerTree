@@ -1,0 +1,130 @@
+Execution  1  -  file=brasil58.stp
+trivial
+Nodos Incluidos na Solution: 
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 
+
+Inicial - Avaliacao = 135559
+
+Tempo gasto = 27segs
+Solução Ótima Tabu - Avaliacao = 14224
+
+27 + 
+14224 + 
+
+Execution  2  -  file=brasil58.stp
+trivial
+Nodos Incluidos na Solution: 
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 
+
+Inicial - Avaliacao = 135559
+
+Tempo gasto = 22segs
+Solução Ótima Tabu - Avaliacao = 14253
+
+27 + 22 +
+14224 + 14253
+
+Execution  3  -  file=brasil58.stp
+trivial
+Nodos Incluidos na Solution: 
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 
+
+Inicial - Avaliacao = 135559
+
+Tempo gasto = 16segs
+Solução Ótima Tabu - Avaliacao = 14737
+
+27 + 22 + 16 +
+14224 + 14253 + 14737
+
+Execution  4  -  file=brasil58.stp
+trivial
+Nodos Incluidos na Solution: 
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 
+
+Inicial - Avaliacao = 135559
+
+Tempo gasto = 22segs
+Solução Ótima Tabu - Avaliacao = 14445
+
+27 + 22 + 16 + 22 + 
+14224 + 14253 + 14737 + 14445
+
+Execution  5  -  file=brasil58.stp
+trivial
+Nodos Incluidos na Solution: 
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 
+
+Inicial - Avaliacao = 135559
+
+Tempo gasto = 16segs
+Solução Ótima Tabu - Avaliacao = 14856
+
+27 + 22 + 16 + 22 + 16 +
+14224 + 14253 + 14737 + 14445 + 14856
+
+Execution  6  -  file=brasil58.stp
+trivial
+Nodos Incluidos na Solution: 
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 
+
+Inicial - Avaliacao = 135559
+
+Tempo gasto = 21segs
+Solução Ótima Tabu - Avaliacao = 14108
+
+27 + 22 + 16 + 22 + 16 + 21 +
+14224 + 14253 + 14737 + 14445 + 14856 + 14108
+
+Execution  7  -  file=brasil58.stp
+trivial
+Nodos Incluidos na Solution: 
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 
+
+Inicial - Avaliacao = 135559
+
+Tempo gasto = 24segs
+Solução Ótima Tabu - Avaliacao = 14590
+
+27 + 22 + 16 + 22 + 16 + 21 + 24
+14224 + 14253 + 14737 + 14445 + 14856 + 14108 + 14590
+
+Execution  8  -  file=brasil58.stp
+trivial
+Nodos Incluidos na Solution: 
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 
+
+Inicial - Avaliacao = 135559
+
+Tempo gasto = 27segs
+Solução Ótima Tabu - Avaliacao = 14451
+
+27 + 22 + 16 + 22 + 16 + 21 + 24 + 27
+14224 + 14253 + 14737 + 14445 + 14856 + 14108 + 14590 + 14451
+
+Execution  9  -  file=brasil58.stp
+trivial
+Nodos Incluidos na Solution: 
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 
+
+Inicial - Avaliacao = 135559
+
+Tempo gasto = 26segs
+Solução Ótima Tabu - Avaliacao = 13950
+
+27 + 22 + 16 + 22 + 16 + 21 + 24 + 27 + 26
+14224 + 14253 + 14737 + 14445 + 14856 + 14108 + 14590 + 14451 + 13950
+
+Execution  10  -  file=brasil58.stp
+trivial
+Nodos Incluidos na Solution: 
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 
+
+Inicial - Avaliacao = 135559
+
+Tempo gasto = 27segs
+Solução Ótima Tabu - Avaliacao = 14166
+
+27 + 22 + 16 + 22 + 16 + 21 + 24 + 27 + 26 + 27
+14224 + 14253 + 14737 + 14445 + 14856 + 14108 + 14590 + 14451 + 13950 + 14166
+

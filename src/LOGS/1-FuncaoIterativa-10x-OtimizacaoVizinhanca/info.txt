@@ -1,0 +1,15 @@
+Função utilizada: Função iterativa com otimização na geração da vizinhança.
+Antes a vizinhança gerava muitos elementos, ocupando recursos demais e gastando
+muito tempo para cada iteração. Com esta otimização foi possível rodar algumas
+instâncias que antes não havíamos conseguido.
+
+Execuções: para cada instância foram feitas 10 execuções.
+
+Observação: Dentro dos arquivos de log há uma sequencia de termos somados, da forma:
+
+x + y + z + ...
+a + b + c + ...
+
+A primeira linha corresponde aos tempos de execução, enquanto a segunda corresponde aos
+correspondetes valores ótimos, ou seja, o tempo x corresponde à solução ótima a, o tempo
+y corresponde à solução ótima b, e assim por diante.

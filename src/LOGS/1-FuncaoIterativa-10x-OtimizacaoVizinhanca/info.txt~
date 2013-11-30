@@ -1,0 +1,8 @@
+Função utilizada: Função iterativa com otimização na geração da vizinhança.
+Antes a vizinhança gerava muitos elementos, ocupando recursos demais e gastando
+muito tempo para cada iteração. Com esta otimização foi possível rodar algumas
+instâncias que antes não havíamos conseguido.
+
+Execuções: para cada instância foram feitas 10 execuções.
+
+

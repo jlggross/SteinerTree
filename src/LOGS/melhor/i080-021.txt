@@ -1,6 +1,0 @@
-Inicial - Avaliacao = 1478
-
-0   ---   meio: 1478
-Tempo gasto = 0segs
-Melhor - Avaliacao = 1478
-
