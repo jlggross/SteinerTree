@@ -233,7 +233,7 @@ void Solution::createNeighborhood(vector<Solution> *solution_vector, Graph g) {
 	vector< edge_t > edgeCount = g.getEdges().getSet();
 	
 	int edgeCountSize = edgeCount.size();
-	int size = edgeCountSize / FATOR_VIZINHOS;
+	int size = edgeCountSize / 4;
 	for (int i=0; i < size; ++i) {
 		int index = rand() % (edgeCountSize - 1);
 		edge_t edge = edgeCount[index];
